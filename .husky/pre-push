@@ -1,0 +1,6 @@
+#!/bin/sh
+# $0はこのファイルを指します
+."$(dirname "$0")/_/husky.sh"
+
+# npm run check-typesを実行
+npm run check-types

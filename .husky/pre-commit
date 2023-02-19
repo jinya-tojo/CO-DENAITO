@@ -1,0 +1,6 @@
+#!/bin/sh
+# $0はこのファイルを指します
+."$(dirmname "$0")/_/husky.sh"
+
+# npm run lint-stagedを実行
+npx lint-staged
