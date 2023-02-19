@@ -19,7 +19,6 @@
     "paths": {
       "src/*": ["./src/*"]
     },
-    "types": ["emotion"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
