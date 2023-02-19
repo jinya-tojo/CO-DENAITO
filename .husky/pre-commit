@@ -3,4 +3,4 @@
 ."$(dirmname "$0")/_/husky.sh"
 
 # npm run lint-stagedを実行
-npm run lint-staged
+npx lint-staged
