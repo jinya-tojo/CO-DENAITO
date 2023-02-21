@@ -2,10 +2,11 @@
 import { styles, containerStyles, imageStyles } from './styles'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import imageSrc from '../../components/Icon/logo-codenaito.png'
+import imageSrc from '../../components/photos/logo-codenaito.png'
 import { login, signUp } from 'src/firebase/firebase'
 import { Button } from '../../components/Button/Index'
 import { TextInput } from '../../components/TextInput'
+// import { Postcard } from 'src/components/Postcard'
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -36,6 +37,8 @@ const Login: React.FC = () => {
           onClick={() => signUp('poko@gmail.com', 'tojo123')}
         />
       </div>
+      {/* <Postcard width="three" height="three" bland="NIKO AND" item="カーティガン" want="ロングスカート" category="トップス"/> */}
+      {/* <Postcard width="four" height="four" /> */}
     </>
   )
 }
