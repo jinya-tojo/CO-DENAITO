@@ -4,8 +4,9 @@ import makeStyles from 'src/styles/makeStyles'
 export const containerStyles = makeStyles({
   container: () => css`
     width: 320px;
-    padding-left: 80px;
-    padding-top: 80px;
+    padding: 80px 80px 0 80px;
+    /* padding-left: 80px;
+    padding-top: 80px; */
   `,
 })
 
