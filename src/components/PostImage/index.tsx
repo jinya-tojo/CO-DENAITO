@@ -6,8 +6,11 @@ import {
   getShapeStyle,
   imageStyles,
   inputStyles,
+  labelStyles,
   optionStyles,
+  tagStyles,
   textStyles,
+  titlesStyles,
 } from './styles'
 
 type Props = {
@@ -19,6 +22,10 @@ export const PostImage: React.FC<Props> = (props) => {
   return (
     <>
       <label>
+        <div css={titlesStyles.titles}>
+          <p css={labelStyles.label}>アイテム画像</p>
+          <p css={tagStyles.tag}>必須</p>
+        </div>
         <div css={getShapeStyle(shape)}>
           <input type="file" css={inputStyles.input} />
           <div css={boxStyles.box}>
