@@ -14,6 +14,8 @@ export const getSizeStyle = (width: string) => {
       return css`
         width: 180px;
         height: 284px;
+        margin-right: 20px;
+        margin-bottom: 70px;
       `
   }
 }
