@@ -9,6 +9,7 @@ export const getShapeStyle = (shape: string) => {
         height: 120px;
         border: 1px dashed #d9d9d9;
         padding-top: 29px;
+        margin-bottom: 50px;
         &:hover {
           cursor: pointer;
         }
@@ -20,12 +21,38 @@ export const getShapeStyle = (shape: string) => {
         border: 1px dashed #d9d9d9;
         border-radius: 50%;
         padding-top: 69px;
+        margin-bottom: 50px;
         &:hover {
           cursor: pointer;
         }
       `
   }
 }
+
+export const titlesStyles = makeStyles({
+  titles: () => css`
+    display: flex;
+  `,
+})
+
+export const labelStyles = makeStyles({
+  label: () => css`
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 10px;
+  `,
+})
+
+export const tagStyles = makeStyles({
+  tag: () => css`
+    font-size: 10px;
+    color: white;
+    background-color: #c93434;
+    padding: 2px 4px;
+    font-weight: bold;
+    margin-bottom: 3px;
+  `,
+})
 
 export const inputStyles = makeStyles({
   input: () => css`

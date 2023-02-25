@@ -20,10 +20,21 @@ const Login: React.FC = () => {
           <Image src={imageSrc} fill alt="ロゴ画像" />
         </div>
         <TextInput
+          tag="no"
+          width="short"
+          size="small"
           label="メールアドレス"
+          onChange={(v: string) => {
+            setEmail(v)
+          }}
+        />
+        <TextInput
+          tag="no"
+          width="short"
+          size="small"
+          label="パスワード"
           onChange={(v: string) => setEmail(v)}
         />
-        <TextInput label="パスワード" onChange={(v: string) => setEmail(v)} />
         <div css={styles.border}>
           <Button
             text="ログイン"
