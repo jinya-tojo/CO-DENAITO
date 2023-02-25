@@ -7,6 +7,8 @@ export const getSizeStyle = (width: string) => {
       return css`
         width: 240px;
         height: 380px;
+        margin-right: 40px;
+        margin-bottom: 40px;
       `
     case 'four':
       return css`
