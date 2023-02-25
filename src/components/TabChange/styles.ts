@@ -7,6 +7,7 @@ export const containerStyles = makeStyles({
   container: () => css`
     display: flex;
     height: 33px;
+    padding: 0 80px;
   `,
 })
 
