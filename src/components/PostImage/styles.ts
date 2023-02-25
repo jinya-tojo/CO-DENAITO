@@ -9,7 +9,7 @@ export const getShapeStyle = (shape: string) => {
         height: 120px;
         border: 1px dashed #d9d9d9;
         padding-top: 29px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         &:hover {
           cursor: pointer;
         }
