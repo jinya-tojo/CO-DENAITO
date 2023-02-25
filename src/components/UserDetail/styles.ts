@@ -4,7 +4,9 @@ import makeStyles from 'src/styles/makeStyles'
 export const containerStyles = makeStyles({
   container: () => css`
     display: flex;
-    width: 366px;
+    justify-content: center;
+    width: 960px;
+    padding: 80px 80px 50px 80px;
     /* background-color: #ddd; */
   `,
 })
