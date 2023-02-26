@@ -29,17 +29,43 @@ export const getShapeStyle = (shape: string) => {
   }
 }
 
+export const getTagStyle = (tag: string) => {
+  switch (tag) {
+    case 'yes':
+      return css`
+        font-size: 10px;
+        color: white;
+        background-color: #c93434;
+        padding: 2px 4px;
+        font-weight: bold;
+        margin-bottom: 3px;
+        margin-left: 10px;
+      `
+    case 'no':
+      return css`
+        display: none;
+      `
+  }
+}
+
+export const getLabelStyle = (label: string) => {
+  switch (label) {
+    case 'yes':
+      return css`
+        font-size: 14px;
+        font-weight: bold;
+        padding-right: 10px;
+      `
+    case 'no':
+      return css`
+        display: none;
+      `
+  }
+}
+
 export const titlesStyles = makeStyles({
   titles: () => css`
     display: flex;
-  `,
-})
-
-export const labelStyles = makeStyles({
-  label: () => css`
-    font-size: 14px;
-    font-weight: bold;
-    padding-right: 10px;
   `,
 })
 

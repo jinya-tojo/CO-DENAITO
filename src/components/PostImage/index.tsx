@@ -3,28 +3,30 @@ import React from 'react'
 import imageSrc from '../photos/camera.png'
 import {
   boxStyles,
+  getLabelStyle,
   getShapeStyle,
+  getTagStyle,
   imageStyles,
   inputStyles,
-  labelStyles,
   optionStyles,
-  tagStyles,
   textStyles,
   titlesStyles,
 } from './styles'
 
 type Props = {
   shape: string
+  tag: string
+  label: string
 }
 
 export const PostImage: React.FC<Props> = (props) => {
-  const { shape } = props
+  const { shape, tag, label } = props
   return (
     <>
       <label>
         <div css={titlesStyles.titles}>
-          <p css={labelStyles.label}>アイテム画像</p>
-          <p css={tagStyles.tag}>必須</p>
+          <p css={getLabelStyle(label)}>アイテム画像</p>
+          <p css={getTagStyle(tag)}>必須</p>
         </div>
         <div css={getShapeStyle(shape)}>
           <input type="file" css={inputStyles.input} />

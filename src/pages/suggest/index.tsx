@@ -25,7 +25,7 @@ const Suggest: React.FC = () => {
         <Category />
         <div css={inputsStyles.inputs}>
           <SuggestTo bland="NIKE" item="カーディガン" category="トップス" />
-          <PostImage shape="box" />
+          <PostImage shape="box" tag="yes" label="yes" />
           <TextInput
             tag="yes"
             width="long"
