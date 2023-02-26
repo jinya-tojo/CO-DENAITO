@@ -21,7 +21,7 @@ const Post: React.FC = () => {
       <div css={containerStyles.container}>
         <Category />
         <div css={inputsStyles.inputs}>
-          <PostImage shape="box" />
+          <PostImage shape="box" tag="yes" label="yes" />
           <TextInput
             tag="yes"
             width="long"
@@ -54,7 +54,6 @@ const Post: React.FC = () => {
           <div css={submitStyles.submit}>
             <Button
               backgroundColor="blown"
-              color="white"
               text="投稿する"
               onClick={() => alert('')}
             />
