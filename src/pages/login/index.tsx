@@ -38,14 +38,12 @@ const Login: React.FC = () => {
         <div css={styles.border}>
           <Button
             text="ログイン"
-            color="white"
             backgroundColor="blown"
             onClick={() => login('poko@gmail.com', 'tojo123')}
           />
         </div>
         <Button
           text="新規会員登録"
-          color="blown"
           backgroundColor="white"
           onClick={() => signUp('poko@gmail.com', 'tojo123')}
         />

@@ -54,7 +54,6 @@ const Post: React.FC = () => {
           <div css={submitStyles.submit}>
             <Button
               backgroundColor="blown"
-              color="white"
               text="投稿する"
               onClick={() => alert('')}
             />

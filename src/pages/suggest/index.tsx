@@ -51,7 +51,6 @@ const Suggest: React.FC = () => {
           <div css={buttonStyles.button}>
             <Button
               backgroundColor="blown"
-              color="white"
               text="おすすめする"
               onClick={onClickButton}
             />
