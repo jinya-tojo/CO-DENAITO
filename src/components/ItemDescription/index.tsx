@@ -16,6 +16,7 @@ import {
   wantIconStyles,
   wantStyles,
 } from './styles'
+import Link from 'next/link'
 
 type ItemDescriptionProps = {
   bland: string
@@ -44,12 +45,18 @@ export const ItemDescription: React.FC<ItemDescriptionProps> = (props) => {
             </div>
             <p>{`欲しいアイテム : ${want}`}</p>
           </div>
-          <button css={buttonStyles.button}>
-            <div css={addIconStyles.addIcon}>
-              <Image src={clothesEditIconSrc} fill alt="おすすめ投稿アイコン" />
-            </div>
-            <p css={suggestStyles.suggest}>このアイテムへのおすすめを追加</p>
-          </button>
+          <Link href="/suggest">
+            <button css={buttonStyles.button}>
+              <div css={addIconStyles.addIcon}>
+                <Image
+                  src={clothesEditIconSrc}
+                  fill
+                  alt="おすすめ投稿アイコン"
+                />
+              </div>
+              <p css={suggestStyles.suggest}>このアイテムへのおすすめを追加</p>
+            </button>
+          </Link>
         </div>
       </div>
     </>

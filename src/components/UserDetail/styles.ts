@@ -28,22 +28,26 @@ export const imageStyles = makeStyles({
 export const detailStyles = makeStyles({
   detail: () => css`
     padding-left: 60px;
+    height: 120px;
+    /* background-color: #ddd; */
   `,
 })
 
 export const nameStyles = makeStyles({
   name: () => css`
     font-size: 24px;
+    vertical-align: top;
+    height: 30px;
     font-weight: bold;
-    padding-bottom: 5px;
   `,
 })
 
 export const numberStyles = makeStyles({
   number: () => css`
     font-size: 14px;
+    height: 14px;
+    margin-top: 5px;
     color: #999;
-    padding-bottom: 15px;
   `,
 })
 
@@ -63,6 +67,10 @@ export const buttonStyles = makeStyles({
     border-radius: 4px;
     color: #5b3c34;
     padding: 8px 16px;
+    margin-top: 10px;
+    &:hover {
+      cursor: pointer;
+    }
   `,
 })
 
@@ -71,5 +79,14 @@ export const textStyles = makeStyles({
     padding-left: 4px;
     font-weight: bold;
     font-size: 14px;
+  `,
+})
+
+export const userInfoStyles = makeStyles({
+  userInfo: () => css`
+    font-size: 16px;
+    height: 16px;
+    margin-top: 5px;
+    color: #333;
   `,
 })

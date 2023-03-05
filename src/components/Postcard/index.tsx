@@ -12,6 +12,7 @@ import {
   iconWithWantStyles,
   wantStyles,
 } from './styles'
+import Link from 'next/link'
 
 type PostcardProps = {
   width: string
@@ -22,33 +23,30 @@ type PostcardProps = {
   category: string
 }
 
-export const Postcard: React.FC<PostcardProps> = ({
-  width,
-  height,
-  bland,
-  item,
-  want,
-  category,
-}) => {
+export const Postcard: React.FC<PostcardProps> = (props) => {
+  const { width, height, bland, item, want, category } = props
+
   return (
     <>
-      <div css={getSizeStyle(width)}>
-        <div css={getImageSizeStyle(height)}>
-          <Image src={imageSrc} fill alt="投稿画像" />
-        </div>
-        <div>
-          <p css={styles.bland}>{bland}</p>
-          <p css={itemStyles.item}>{item}</p>
-          <div css={iconWithWantStyles.iconWithWant}>
-            <div css={iconStyles.icon}>
-              <Image src={iconSrc} fill alt="addアイコン" />
-            </div>
-            <p css={wantStyles.want}>{want}</p>
+      <Link href="/postdetail">
+        <div css={getSizeStyle(width)}>
+          <div css={getImageSizeStyle(height)}>
+            <Image src={imageSrc} fill alt="投稿画像" />
           </div>
+          <div>
+            <p css={styles.bland}>{bland}</p>
+            <p css={itemStyles.item}>{item}</p>
+            <div css={iconWithWantStyles.iconWithWant}>
+              <div css={iconStyles.icon}>
+                <Image src={iconSrc} fill alt="addアイコン" />
+              </div>
+              <p css={wantStyles.want}>{want}</p>
+            </div>
 
-          <p css={categoryStyles.category}>{category}</p>
+            <p css={categoryStyles.category}>{category}</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </>
   )
 }

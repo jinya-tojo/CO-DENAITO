@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Button } from 'src/components/Button/Index'
 import { Category } from 'src/components/Category'
@@ -14,10 +15,15 @@ import {
 } from './styles'
 
 const EditUser: React.FC = () => {
-  const onClickButton = () => {
-    alert('')
-  }
   const [name, setName] = useState('')
+  const [gender, setGender] = useState('')
+  const [height, setHeight] = useState('')
+  const [style, setStyle] = useState('')
+  const router = useRouter()
+
+  const onClickButton = () => {
+    router.push('/mypage')
+  }
   return (
     <>
       <LoginHeader />
@@ -33,6 +39,27 @@ const EditUser: React.FC = () => {
             size="small"
             label="名前"
             onChange={(v: string) => setName(v)}
+          />
+          <TextInput
+            tag="no"
+            width="short"
+            size="small"
+            label="性別"
+            onChange={(v: string) => setGender(v)}
+          />
+          <TextInput
+            tag="no"
+            width="short"
+            size="small"
+            label="身長"
+            onChange={(v: string) => setHeight(v)}
+          />
+          <TextInput
+            tag="no"
+            width="short"
+            size="small"
+            label="好きなスタイル"
+            onChange={(v: string) => setStyle(v)}
           />
           <div css={completeStyles.complete}>
             <Button
