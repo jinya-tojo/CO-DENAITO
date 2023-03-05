@@ -3,7 +3,12 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
 } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
+// import { useAtom } from 'jotai'
+// import { userEmailAtom } from 'src/atoms'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -15,13 +20,16 @@ const firebaseConfig = {
 }
 
 export const app = initializeApp(firebaseConfig)
+export const auth = getAuth()
 
-const auth = getAuth(app)
+export const db = getFirestore(app)
 
 export const signUp = (email: string, password: string) => {
+  // const [user, setUser] = useAtom(userEmailAtom)
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user
+      console.log(user)
     })
     .catch((error) => {
       const errorCode = error.code
@@ -42,3 +50,17 @@ export const login = (email: string, password: string) => {
       const errorMessage = error.message
     })
 }
+
+export const logout = (email: string, password: string) => {
+  signOut(auth)
+    .then(() => {})
+    .catch((error) => {
+      alert(error)
+    })
+}
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid
+  }
+})

@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Button } from 'src/components/Button/Index'
 import { Category } from 'src/components/Category'
@@ -13,9 +14,10 @@ const Suggest: React.FC = () => {
   const [item, setItem] = useState('')
   const [bland, setBland] = useState('')
   const [text, setText] = useState('')
+  const router = useRouter()
 
   const onClickButton = () => {
-    alert('実行されたよ')
+    router.push('/postdetail')
   }
 
   return (

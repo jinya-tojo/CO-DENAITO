@@ -87,6 +87,9 @@ export const buttonStyles = makeStyles({
     background-color: #5b3c34;
     border: none;
     border-radius: 4px;
+    &:hover {
+      cursor: pointer;
+    }
   `,
 })
 
