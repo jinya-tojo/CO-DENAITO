@@ -14,6 +14,7 @@ const Suggest: React.FC = () => {
   const [item, setItem] = useState('')
   const [bland, setBland] = useState('')
   const [text, setText] = useState('')
+  const [category, setCategory] = useState('')
   const router = useRouter()
 
   const onClickButton = () => {
@@ -42,7 +43,10 @@ const Suggest: React.FC = () => {
             label="ブランド名"
             onChange={(v: string) => setItem(v)}
           />
-          <SelectCategory />
+          <SelectCategory
+            value={category}
+            onChange={(v: string) => setCategory(v)}
+          />
           <TextInput
             tag="yes"
             width="long"
