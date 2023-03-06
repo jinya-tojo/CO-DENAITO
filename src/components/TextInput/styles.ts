@@ -47,13 +47,10 @@ export const getTagStyle = (tag: string) => {
   }
 }
 
-export const titlesStyles = makeStyles({
+export const styles = makeStyles({
   titles: () => css`
     display: flex;
   `,
-})
-
-export const styles = makeStyles({
   input: () => css`
     width: 400px;
     border: 1px solid #d9d9d9;
@@ -61,9 +58,6 @@ export const styles = makeStyles({
     padding: 14px;
     margin-bottom: 15px;
   `,
-})
-
-export const inputStyle = makeStyles({
   label: () => css`
     font-size: 12px;
     font-weight: bold;

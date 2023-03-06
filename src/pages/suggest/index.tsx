@@ -8,7 +8,7 @@ import { PostImage } from 'src/components/PostImage'
 import { SelectCategory } from 'src/components/SelectCategory'
 import { SuggestTo } from 'src/components/SuggestTo'
 import { TextInput } from 'src/components/TextInput'
-import { buttonStyles, containerStyles, inputsStyles } from './styles'
+import { styles } from '../../styles/suggestStyles'
 
 const Suggest: React.FC = () => {
   const [item, setItem] = useState('')
@@ -18,15 +18,15 @@ const Suggest: React.FC = () => {
   const router = useRouter()
 
   const onClickButton = () => {
-    router.push('/postdetail')
+    router.push('/postDetail')
   }
 
   return (
     <div>
       <LoginHeader />
-      <div css={containerStyles.container}>
+      <div css={styles.container}>
         <Category />
-        <div css={inputsStyles.inputs}>
+        <div css={styles.inputs}>
           <SuggestTo bland="NIKE" item="カーディガン" category="トップス" />
           <PostImage shape="box" tag="yes" label="yes" />
           <TextInput
@@ -34,6 +34,7 @@ const Suggest: React.FC = () => {
             width="long"
             size="big"
             label="アイテム名"
+            value={item}
             onChange={(v: string) => setItem(v)}
           />
           <TextInput
@@ -41,7 +42,8 @@ const Suggest: React.FC = () => {
             width="long"
             size="big"
             label="ブランド名"
-            onChange={(v: string) => setItem(v)}
+            value={bland}
+            onChange={(v: string) => setBland(v)}
           />
           <SelectCategory
             value={category}
@@ -52,9 +54,10 @@ const Suggest: React.FC = () => {
             width="long"
             size="big"
             label="アイテムの説明"
-            onChange={(v: string) => setItem(v)}
+            value={text}
+            onChange={(v: string) => setText(v)}
           />
-          <div css={buttonStyles.button}>
+          <div css={styles.button}>
             <Button
               backgroundColor="blown"
               text="おすすめする"

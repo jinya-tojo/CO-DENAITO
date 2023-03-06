@@ -1,26 +1,18 @@
-import { addIconStyles } from './../ItemDescription/styles'
 import { css } from '@emotion/react'
 import makeStyles from 'src/styles/makeStyles'
-import { mkdtemp } from 'fs'
 
-export const containerStyles = makeStyles({
+export const styles = makeStyles({
   container: () => css`
     display: flex;
     height: 33px;
     padding: 0 80px;
   `,
-})
-
-export const IconStyles = makeStyles({
   Icon: () => css`
     position: relative;
     width: 18px;
     height: 18px;
     margin-right: 7px;
   `,
-})
-
-export const iconWithTitle1Styles = makeStyles({
   iconWithTitle1: () => css`
     display: flex;
     justify-content: center;
@@ -35,9 +27,6 @@ export const iconWithTitle1Styles = makeStyles({
       cursor: pointer;
     }
   `,
-})
-
-export const iconWithTitle2Styles = makeStyles({
   iconWithTitle2: () => css`
     display: flex;
     justify-content: center;
@@ -52,9 +41,6 @@ export const iconWithTitle2Styles = makeStyles({
       cursor: pointer;
     }
   `,
-})
-
-export const titleStyles = makeStyles({
   title: () => css`
     font-size: 14px;
     line-height: 18px;

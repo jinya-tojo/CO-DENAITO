@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import makeStyles from 'src/styles/makeStyles'
 
-export const headerStyles = makeStyles({
+export const styles = makeStyles({
   header: () => css`
     width: 100%;
     height: 60px;
@@ -9,9 +9,6 @@ export const headerStyles = makeStyles({
     padding-left: 40px;
     border: 1px solid #ddd;
   `,
-})
-
-export const logoStyles = makeStyles({
   logo: () => css`
     position: relative;
     width: 250px;
@@ -19,18 +16,12 @@ export const logoStyles = makeStyles({
     float: left;
     margin-top: 14px;
   `,
-})
-
-export const listStyles = makeStyles({
   list: () => css`
     float: right;
     display: flex;
     font-size: 14px;
     line-height: 60px;
   `,
-})
-
-export const borderStyles = makeStyles({
   border: () => css`
     padding-right: 15px;
     margin-right: 15px;

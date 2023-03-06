@@ -1,6 +1,6 @@
-import { doc, DocumentData, getDoc } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 import { useAtom } from 'jotai'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { AllPosts } from 'src/components/AllPosts'
 import { Category } from 'src/components/Category'
 import { Footer } from 'src/components/Footer'
@@ -10,7 +10,7 @@ import { UserDetail } from 'src/components/UserDetail'
 import { db } from 'src/firebase/firebase'
 import { userData } from 'src/libs/atom'
 import { User } from 'src/types'
-import { myInfoStyles } from './styles'
+import { styles } from '../../styles/myInfoStyles'
 
 const Mypage: React.FC = () => {
   const [user, setUser] = useAtom(userData)
@@ -32,7 +32,7 @@ const Mypage: React.FC = () => {
   return (
     <div>
       <LoginHeader />
-      <div css={myInfoStyles.myInfo}>
+      <div css={styles.myInfo}>
         <Category />
         <div>
           <UserDetail

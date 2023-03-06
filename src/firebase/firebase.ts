@@ -3,12 +3,9 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged,
+  // signOut,
 } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
-// import { useAtom } from 'jotai'
-// import { userEmailAtom } from 'src/atoms'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -25,7 +22,6 @@ export const auth = getAuth()
 export const db = getFirestore(app)
 
 export const signUp = (email: string, password: string) => {
-  // const [user, setUser] = useAtom(userEmailAtom)
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user
@@ -39,6 +35,7 @@ export const signUp = (email: string, password: string) => {
     })
 }
 
+// どこを消すか、編集するかわらない
 export const login = (email: string, password: string) => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -47,20 +44,23 @@ export const login = (email: string, password: string) => {
     })
     .catch((error) => {
       const errorCode = error.code
-      const errorMessage = error.message
+      // const errorMessage = error.message
+      if (errorCode) {
+        alert(errorCode)
+      }
     })
 }
 
-export const logout = (email: string, password: string) => {
-  signOut(auth)
-    .then(() => {})
-    .catch((error) => {
-      alert(error)
-    })
-}
+// export const logout = (email: string, password: string) => {
+//   signOut(auth)
+//     .then(() => {})
+//     .catch((error) => {
+//       alert(error)
+//     })
+// }
 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    const uid = user.uid
-  }
-})
+// onAuthStateChanged(auth, (user) => {
+//   if (user) {
+//     const uid = user.uid
+//   }
+// })

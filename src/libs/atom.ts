@@ -2,7 +2,7 @@ import { atom } from 'jotai'
 import { User } from 'src/types'
 
 export const userData = atom<User>({
-  uid: '',
+  uid: 'RXOjuotqX8P2jLNZ7PMIPRssO0e2',
   name: '',
   gender: '',
   height: '',

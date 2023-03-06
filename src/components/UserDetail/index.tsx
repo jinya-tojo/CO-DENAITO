@@ -1,20 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import profileImageSrc from '../photos/icon_198x278.png'
-import pencilIconSrc from '../photos/pencil.png'
-import {
-  buttonStyles,
-  containerStyles,
-  detailStyles,
-  iconStyles,
-  imageBoxStyles,
-  imageStyles,
-  nameStyles,
-  numberStyles,
-  textStyles,
-  userInfoStyles,
-} from './styles'
+import { styles } from './styles'
 
 type UserDetailProps = {
   name: string
@@ -28,29 +14,26 @@ export const UserDetail: React.FC<UserDetailProps> = (props) => {
   const { name, postNumber, gender, height, style } = props
 
   return (
-    <div css={containerStyles.container}>
+    <div css={styles.container}>
       <div>
-        <div css={imageBoxStyles.imageBox}>
-          <Image
-            css={imageStyles.image}
-            src={profileImageSrc}
-            fill
+        <div css={styles.imageBox}>
+          <img
+            css={styles.image}
+            src="icon_198x278.png"
             alt="ユーザーアイコン画像"
           />
         </div>
       </div>
-      <div css={detailStyles.detail}>
-        <p css={nameStyles.name}>{name}</p>
-        <p
-          css={userInfoStyles.userInfo}
-        >{`${height} / ${gender} / ${style}`}</p>
-        <p css={numberStyles.number}>{`投稿${postNumber}件`}</p>
+      <div css={styles.detail}>
+        <p css={styles.name}>{name}</p>
+        <p css={styles.userInfo}>{`${height} / ${gender} / ${style}`}</p>
+        <p css={styles.number}>{`投稿${postNumber}件`}</p>
         <Link href="/edit-user">
-          <button css={buttonStyles.button}>
-            <div css={iconStyles.icon}>
-              <Image src={pencilIconSrc} fill alt="編集アイコン" />
+          <button css={styles.button}>
+            <div css={styles.icon}>
+              <img src="pencil.png" alt="編集アイコン" />
             </div>
-            <p css={textStyles.text}>プロフィールを編集</p>
+            <p css={styles.text}>プロフィールを編集</p>
           </button>
         </Link>
       </div>

@@ -1,14 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import { login, signUp } from 'src/firebase/firebase'
-import { TextInput } from 'src/components/TextInput'
-import { useState } from 'react'
-import { Button } from 'src/components/Button/Index'
 import Login from 'src/pages/login'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (

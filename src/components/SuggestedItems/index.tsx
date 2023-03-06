@@ -1,12 +1,12 @@
 import React from 'react'
 import { Postcard } from '../Postcard'
-import { containerStyles, itemsStyles, titleStyles } from './styles'
+import { styles } from './styles'
 
 export const SuggestedItems: React.FC = () => {
   return (
-    <div css={containerStyles.container}>
-      <p css={titleStyles.title}>おすすめされているアイテム</p>
-      <div css={itemsStyles.items}>
+    <div css={styles.container}>
+      <p css={styles.title}>おすすめされているアイテム</p>
+      <div css={styles.items}>
         <Postcard
           width="four"
           height="four"

@@ -4,13 +4,13 @@ import { Footer } from 'src/components/Footer'
 import { ItemDescription } from 'src/components/ItemDescription'
 import { LoginHeader } from 'src/components/LoginHeader'
 import { SuggestedItems } from 'src/components/SuggestedItems'
-import { containerStyles } from './styles'
+import { styles } from '../../styles/postDetailStyles'
 
 const PostDetail: React.FC = () => {
   return (
     <div>
       <LoginHeader />
-      <div css={containerStyles.container}>
+      <div css={styles.container}>
         <Category />
         <div>
           <ItemDescription

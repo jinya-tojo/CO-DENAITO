@@ -1,5 +1,5 @@
 import React from 'react'
-import { titleStyles, selectStyles, labelStyles, tagStyles } from './styles'
+import { styles } from './styles'
 
 type SelectCategoryProps = {
   value: string
@@ -12,12 +12,12 @@ export const SelectCategory: React.FC<SelectCategoryProps> = ({
 }) => {
   return (
     <>
-      <div css={titleStyles.title}>
-        <label css={labelStyles.label}>カテゴリー</label>
-        <p css={tagStyles.tag}>必須</p>
+      <div css={styles.title}>
+        <label css={styles.label}>カテゴリー</label>
+        <p css={styles.tag}>必須</p>
       </div>
       <select
-        css={selectStyles.select}
+        css={styles.select}
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >

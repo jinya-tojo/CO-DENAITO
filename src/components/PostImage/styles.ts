@@ -63,13 +63,10 @@ export const getLabelStyle = (label: string) => {
   }
 }
 
-export const titlesStyles = makeStyles({
+export const styles = makeStyles({
   titles: () => css`
     display: flex;
   `,
-})
-
-export const tagStyles = makeStyles({
   tag: () => css`
     font-size: 10px;
     color: white;
@@ -78,15 +75,9 @@ export const tagStyles = makeStyles({
     font-weight: bold;
     margin-bottom: 3px;
   `,
-})
-
-export const inputStyles = makeStyles({
   input: () => css`
     display: none;
   `,
-})
-
-export const boxStyles = makeStyles({
   box: () => css`
     display: flex;
     border: 2px solid #5b3c34;
@@ -97,9 +88,6 @@ export const boxStyles = makeStyles({
     margin: 0 auto;
     vertical-align: middle;
   `,
-})
-
-export const imageStyles = makeStyles({
   image: () => css`
     width: 18px;
     height: 18px;
@@ -107,17 +95,11 @@ export const imageStyles = makeStyles({
     margin-top: 2px;
     margin-right: 4px;
   `,
-})
-
-export const textStyles = makeStyles({
   text: () => css`
     font-size: 14px;
     color: #5b3c34;
     font-weight: bold;
   `,
-})
-
-export const optionStyles = makeStyles({
   option: () => css`
     font-size: 12px;
     color: #5b3c34;

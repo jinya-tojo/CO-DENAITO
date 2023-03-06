@@ -11,20 +11,17 @@ import { SelectCategory } from 'src/components/SelectCategory'
 import { TextInput } from 'src/components/TextInput'
 import { db } from 'src/firebase/firebase'
 import { userData } from 'src/libs/atom'
-import { containerStyles, inputsStyles, submitStyles } from './styles'
-import { collection, addDoc } from 'firebase/firestore'
+import { styles } from '../../styles/postStyles'
 
 const Post: React.FC = () => {
   const [item, setItem] = useState('')
   const [bland, setBland] = useState('')
   const [detail, setDetail] = useState('')
   const [category, setCategory] = useState('')
-  console.log(category)
   const [want, setWant] = useState('')
   const [user, setUser] = useAtom(userData)
   const router = useRouter()
   const id = useId()
-  console.log(id)
 
   const docRef = doc(db, 'users', user.uid)
   const submit = async () => {
@@ -63,15 +60,16 @@ const Post: React.FC = () => {
   return (
     <div>
       <LoginHeader />
-      <div css={containerStyles.container}>
+      <div css={styles.container}>
         <Category />
-        <div css={inputsStyles.inputs}>
+        <div css={styles.inputs}>
           <PostImage shape="box" tag="yes" label="yes" />
           <TextInput
             tag="yes"
             width="long"
             size="big"
             label="アイテム名"
+            value={item}
             onChange={(v: string) => setItem(v)}
           />
           <TextInput
@@ -79,6 +77,7 @@ const Post: React.FC = () => {
             width="long"
             size="small"
             label="ブランド名"
+            value={bland}
             onChange={(v: string) => setBland(v)}
           />
           <SelectCategory
@@ -90,6 +89,7 @@ const Post: React.FC = () => {
             width="long"
             size="small"
             label="アイテムの説明"
+            value={detail}
             onChange={(v: string) => setDetail(v)}
           />
           <TextInput
@@ -97,9 +97,10 @@ const Post: React.FC = () => {
             width="long"
             size="small"
             label="欲しいアイテム"
+            value={want}
             onChange={(v: string) => setWant(v)}
           />
-          <div css={submitStyles.submit}>
+          <div css={styles.submit}>
             <Button backgroundColor="blown" text="投稿する" onClick={submit} />
           </div>
         </div>

@@ -1,18 +1,9 @@
-import Image from 'next/image'
-import ImgSrc from '../../components/photos/logo-codenaito.png'
 import React, { useState } from 'react'
 import { Button } from 'src/components/Button/Index'
-import { LoginHeader } from 'src/components/LoginHeader'
 import { PostImage } from 'src/components/PostImage'
 import { TextInput } from 'src/components/TextInput'
-import {
-  containerStyles,
-  imageStyles,
-  PostImageStyles,
-  signupButtonStyles,
-} from './styles'
+import { styles } from '../../styles/signupStyles'
 import { useRouter } from 'next/router'
-import { useSignUp } from 'src/hooks/useSignUp'
 import { doc, setDoc } from 'firebase/firestore'
 import { db } from 'src/firebase/firebase'
 import { userData } from 'src/libs/atom'
@@ -53,11 +44,11 @@ const Signup: React.FC = () => {
     }
   }
   return (
-    <div css={containerStyles.container}>
-      <div css={imageStyles.icon}>
-        <Image src={ImgSrc} fill alt="ロゴ画像" />
+    <div css={styles.container}>
+      <div css={styles.icon}>
+        <img src="logo-codenaito.png" alt="ロゴ画像" />
       </div>
-      <div css={PostImageStyles.image}>
+      <div css={styles.image}>
         <PostImage shape="circle" tag="no" label="no" />
       </div>
 
@@ -66,6 +57,7 @@ const Signup: React.FC = () => {
         width="short"
         size="small"
         label="名前"
+        value={name}
         onChange={(v: string) => {
           setName(v)
         }}
@@ -75,6 +67,7 @@ const Signup: React.FC = () => {
         width="short"
         size="small"
         label="性別"
+        value={gender}
         onChange={(v: string) => {
           setGender(v)
         }}
@@ -84,6 +77,7 @@ const Signup: React.FC = () => {
         width="short"
         size="small"
         label="身長"
+        value={height}
         onChange={(v: string) => {
           setHeight(v)
         }}
@@ -93,6 +87,7 @@ const Signup: React.FC = () => {
         width="short"
         size="small"
         label="系統"
+        value={style}
         onChange={(v: string) => {
           setStyle(v)
         }}
@@ -102,6 +97,7 @@ const Signup: React.FC = () => {
         width="short"
         size="small"
         label="自己紹介"
+        value={introduce}
         onChange={(v: string) => {
           setIntroduce(v)
         }}

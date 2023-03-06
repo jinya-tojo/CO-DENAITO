@@ -1,13 +1,11 @@
-import Image from 'next/image'
 import React from 'react'
-import logoSrc from '../photos/logo-codenaito.png'
-import { footerStyles, imageBoxStyles, imageStyles } from './styles'
+import { styles } from './styles'
 
 export const Footer: React.FC = () => {
   return (
-    <footer css={footerStyles.footer}>
-      <div css={imageBoxStyles.imageBox}>
-        <Image css={imageStyles.image} src={logoSrc} fill alt="ロゴ画像" />
+    <footer css={styles.footer}>
+      <div css={styles.imageBox}>
+        <img css={styles.image} src="logo-codenaito.png" alt="ロゴ画像" />
       </div>
     </footer>
   )

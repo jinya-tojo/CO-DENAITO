@@ -1,36 +1,29 @@
 /** @jsxImportSource @emotion/react */
-import { styles, containerStyles, imageStyles } from './styles'
+import { styles } from '../../styles/loginStyles'
 import React, { useState } from 'react'
-import Image from 'next/image'
-import imageSrc from '../../components/photos/logo-codenaito.png'
-import { login } from 'src/firebase/firebase'
 import { Button } from '../../components/Button/Index'
 import { TextInput } from '../../components/TextInput'
 import { useLogin } from 'src/hooks/useLogin'
-import { useRouter } from 'next/router'
 import { useSignUp } from 'src/hooks/useSignUp'
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
-  // const user = FirebaseAuth.getInstance().getCurrentUser();
-
   const { login } = useLogin()
   const { signup } = useSignUp()
-  const router = useRouter()
 
   return (
     <>
-      <div css={containerStyles.container}>
-        <div css={imageStyles.icon}>
-          <Image src={imageSrc} fill alt="ロゴ画像" />
+      <div css={styles.container}>
+        <div css={styles.icon}>
+          <img src="logo-codenaito.png" alt="ロゴ画像" />
         </div>
         <TextInput
           tag="no"
           width="short"
           size="small"
           label="メールアドレス"
+          value={email}
           onChange={(v: string) => {
             setEmail(v)
           }}
@@ -40,6 +33,7 @@ const Login: React.FC = () => {
           width="short"
           size="small"
           label="パスワード"
+          value={password}
           onChange={(v: string) => {
             setPassword(v)
           }}

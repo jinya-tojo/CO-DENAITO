@@ -1,12 +1,5 @@
 import React, { useId } from 'react'
-import {
-  styles,
-  inputStyle,
-  getWithStyle,
-  getFontSizeStyle,
-  getTagStyle,
-  titlesStyles,
-} from './styles'
+import { styles, getWithStyle, getFontSizeStyle, getTagStyle } from './styles'
 
 type TextInputProps = {
   tag: string
@@ -14,6 +7,7 @@ type TextInputProps = {
   size: string
   label: string
   onChange: (v: string) => void
+  value: string
 }
 
 export const TextInput: React.FC<TextInputProps> = ({
@@ -22,13 +16,14 @@ export const TextInput: React.FC<TextInputProps> = ({
   width,
   size,
   tag,
+  value,
 }) => {
   const id = useId()
 
   return (
     <>
-      <div css={titlesStyles.titles}>
-        <label css={[inputStyle.label, getFontSizeStyle(size)]} htmlFor={id}>
+      <div css={styles.titles}>
+        <label css={[styles.label, getFontSizeStyle(size)]} htmlFor={id}>
           {label}
         </label>
         <p css={[getTagStyle(tag)]}>必須</p>
@@ -37,6 +32,7 @@ export const TextInput: React.FC<TextInputProps> = ({
         css={[styles.input, getWithStyle(width)]}
         type="text"
         id={id}
+        value={value}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           onChange(e.target.value)
         }}

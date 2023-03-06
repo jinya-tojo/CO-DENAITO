@@ -1,7 +1,7 @@
 import { userData } from './../libs/atom'
 import { useAtom } from 'jotai'
 import { auth } from '../firebase/firebase'
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { useRouter } from 'next/router'
 
 type Props = {

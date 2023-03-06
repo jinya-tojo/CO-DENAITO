@@ -6,13 +6,7 @@ import { Footer } from 'src/components/Footer'
 import { LoginHeader } from 'src/components/LoginHeader'
 import { PostImage } from 'src/components/PostImage'
 import { TextInput } from 'src/components/TextInput'
-import {
-  cancelStyles,
-  completeStyles,
-  containerStyles,
-  imageStyles,
-  inputsStyles,
-} from './styles'
+import { styles } from '../../styles/edit-userStyles'
 
 const EditUser: React.FC = () => {
   const [name, setName] = useState('')
@@ -22,15 +16,15 @@ const EditUser: React.FC = () => {
   const router = useRouter()
 
   const onClickButton = () => {
-    router.push('/mypage')
+    router.push('/myPage')
   }
   return (
     <>
       <LoginHeader />
-      <div css={containerStyles.container}>
+      <div css={styles.container}>
         <Category />
-        <div css={inputsStyles.inputs}>
-          <div css={imageStyles.image}>
+        <div css={styles.inputs}>
+          <div css={styles.image}>
             <PostImage shape="circle" tag="no" label="no" />
           </div>
           <TextInput
@@ -38,6 +32,7 @@ const EditUser: React.FC = () => {
             width="short"
             size="small"
             label="名前"
+            value={name}
             onChange={(v: string) => setName(v)}
           />
           <TextInput
@@ -45,6 +40,7 @@ const EditUser: React.FC = () => {
             width="short"
             size="small"
             label="性別"
+            value={gender}
             onChange={(v: string) => setGender(v)}
           />
           <TextInput
@@ -52,6 +48,7 @@ const EditUser: React.FC = () => {
             width="short"
             size="small"
             label="身長"
+            value={height}
             onChange={(v: string) => setHeight(v)}
           />
           <TextInput
@@ -59,16 +56,17 @@ const EditUser: React.FC = () => {
             width="short"
             size="small"
             label="好きなスタイル"
+            value={style}
             onChange={(v: string) => setStyle(v)}
           />
-          <div css={completeStyles.complete}>
+          <div css={styles.complete}>
             <Button
               backgroundColor="blown"
               text="完了する"
               onClick={onClickButton}
             />
           </div>
-          <div css={cancelStyles.cancel}>
+          <div css={styles.cancel}>
             <Button
               backgroundColor="gray"
               text="キャンセル"

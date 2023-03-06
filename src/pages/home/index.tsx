@@ -1,13 +1,12 @@
 import { collection, onSnapshot, query } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { AllData } from 'src/components/AllData'
-import { AllPosts } from 'src/components/AllPosts'
 import { Category } from 'src/components/Category'
 import { Footer } from 'src/components/Footer'
 import { LoginHeader } from 'src/components/LoginHeader'
 import { db } from 'src/firebase/firebase'
 import { Post } from 'src/types'
-import { containerStyles, postStyles } from './styles'
+import { styles } from '../../styles/homeStyles'
 
 const Home: React.FC = () => {
   const [data, setData] = useState<Post[]>()
@@ -27,9 +26,9 @@ const Home: React.FC = () => {
   return (
     <div>
       <LoginHeader />
-      <div css={containerStyles.container}>
+      <div css={styles.container}>
         <Category />
-        <div css={postStyles.posts}>
+        <div css={styles.posts}>
           {data?.map((eachPost, index) => {
             return (
               <AllData

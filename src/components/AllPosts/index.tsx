@@ -1,11 +1,11 @@
-import { doc, DocumentData, getDoc } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 import { useAtom } from 'jotai'
 import React, { useEffect } from 'react'
 import { db } from 'src/firebase/firebase'
 import { userData } from 'src/libs/atom'
 import { User } from 'src/types'
 import { Postcard } from '../Postcard'
-import { containerStyles } from './styles'
+import { styles } from './styles'
 
 export const AllPosts: React.FC = () => {
   const [user, setUser] = useAtom(userData)
@@ -24,10 +24,8 @@ export const AllPosts: React.FC = () => {
     getData()
   }, [])
 
-  // console.log(user.posts.map((data) => console.log(data)))
-
   return (
-    <div css={containerStyles.container}>
+    <div css={styles.container}>
       {user.posts.map((post, index) => {
         return (
           <Postcard

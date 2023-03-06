@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import makeStyles from 'src/styles/makeStyles'
 
-export const containerStyles = makeStyles({
+export const styles = makeStyles({
   container: () => css`
     /* background-color:#ddd; */
     width: 960px;

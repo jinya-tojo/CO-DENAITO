@@ -1,22 +1,22 @@
 import React from 'react'
-import { containerStyles, liStyles, titleStyles, ulStyles } from './styles'
+import { styles } from './styles'
 
 export const Category: React.FC = () => {
   return (
     <>
-      <div css={containerStyles.container}>
-        <h3 css={titleStyles.title}>カテゴリー</h3>
-        <ul css={ulStyles.ul}>
-          <li css={liStyles.li}>トップス</li>
-          <li css={liStyles.li}>ジャケット / アウター</li>
-          <li css={liStyles.li}>パンツ</li>
-          <li css={liStyles.li}>オールインワン</li>
-          <li css={liStyles.li}>スカート</li>
-          <li css={liStyles.li}>ワンピース/ドレス</li>
-          <li css={liStyles.li}>スーツ</li>
-          <li css={liStyles.li}>バッグ</li>
-          <li css={liStyles.li}>シューズ</li>
-          <li css={liStyles.li}>ファッション雑貨 / 小物</li>
+      <div css={styles.container}>
+        <h3 css={styles.title}>カテゴリー</h3>
+        <ul css={styles.ul}>
+          <li css={styles.li}>トップス</li>
+          <li css={styles.li}>ジャケット / アウター</li>
+          <li css={styles.li}>パンツ</li>
+          <li css={styles.li}>オールインワン</li>
+          <li css={styles.li}>スカート</li>
+          <li css={styles.li}>ワンピース/ドレス</li>
+          <li css={styles.li}>スーツ</li>
+          <li css={styles.li}>バッグ</li>
+          <li css={styles.li}>シューズ</li>
+          <li css={styles.li}>ファッション雑貨 / 小物</li>
         </ul>
       </div>
     </>

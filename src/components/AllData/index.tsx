@@ -1,11 +1,5 @@
-import { doc, DocumentData, getDoc, query } from 'firebase/firestore'
-import { useAtom } from 'jotai'
-import React, { useEffect } from 'react'
-import { db } from 'src/firebase/firebase'
-import { userData } from 'src/libs/atom'
-import { Post, User } from 'src/types'
+import React from 'react'
 import { Postcard } from '../Postcard'
-import { collection, onSnapshot } from 'firebase/firestore'
 
 type Props = {
   // post: Post
@@ -16,13 +10,7 @@ type Props = {
   want: string
 }
 
-export const AllData: React.FC<Props> = ({
-  item,
-  bland,
-  detail,
-  category,
-  want,
-}) => {
+export const AllData: React.FC<Props> = ({ item, bland, category, want }) => {
   // const [user, setUser] = useAtom(userData)
   return (
     <div>
@@ -32,7 +20,7 @@ export const AllData: React.FC<Props> = ({
         bland={bland}
         item={item}
         want={want}
-        category={bland}
+        category={category}
       />
     </div>
   )
