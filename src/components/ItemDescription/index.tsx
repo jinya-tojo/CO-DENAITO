@@ -1,6 +1,7 @@
 import React from 'react'
 import { styles } from './styles'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type ItemDescriptionProps = {
   bland: string
@@ -16,7 +17,7 @@ export const ItemDescription: React.FC<ItemDescriptionProps> = (props) => {
     <>
       <div css={styles.container}>
         <div css={styles.image}>
-          <img src="sampleClothe.jpeg" alt="投稿画像" />
+          <Image src="/sampleClothe.jpeg" alt="投稿画像" fill />
         </div>
         <div css={styles.description}>
           <p css={styles.bland}>{bland}</p>
@@ -25,14 +26,14 @@ export const ItemDescription: React.FC<ItemDescriptionProps> = (props) => {
           <p css={styles.category}>{category}</p>
           <div css={styles.want}>
             <div css={styles.wantIcon}>
-              <img src="addIcon3x.png" alt="wantアイコン" />
+              <Image src="/addIcon3x.png" alt="wantアイコン" fill />
             </div>
             <p>{`欲しいアイテム : ${want}`}</p>
           </div>
           <Link href="/suggest">
             <button css={styles.button}>
               <div css={styles.addIcon}>
-                <img src="clotheEdit.png" alt="おすすめ投稿アイコン" />
+                <Image src="/clotheEdit.png" alt="おすすめ投稿アイコン" fill />
               </div>
               <p css={styles.suggest}>このアイテムへのおすすめを追加</p>
             </button>

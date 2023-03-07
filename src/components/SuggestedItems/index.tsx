@@ -11,7 +11,7 @@ export const SuggestedItems: React.FC = () => {
           width="four"
           height="four"
           bland="NIKO AND"
-          item="チェック柄スラくす"
+          item="スラックス"
           category="パンツ"
           want="キャップ"
         />
@@ -19,7 +19,7 @@ export const SuggestedItems: React.FC = () => {
           width="four"
           height="four"
           bland="NIKO AND"
-          item="チェック柄スラくす"
+          item="スラックス"
           category="パンツ"
           want="キャップ"
         />
@@ -27,7 +27,7 @@ export const SuggestedItems: React.FC = () => {
           width="four"
           height="four"
           bland="NIKO AND"
-          item="チェック柄スラくす"
+          item="スラックス"
           category="パンツ"
           want="キャップ"
         />
@@ -35,7 +35,7 @@ export const SuggestedItems: React.FC = () => {
           width="four"
           height="four"
           bland="NIKO AND"
-          item="チェック柄スラくす"
+          item="スラックス"
           category="パンツ"
           want="キャップ"
         />
@@ -43,7 +43,7 @@ export const SuggestedItems: React.FC = () => {
           width="four"
           height="four"
           bland="NIKO AND"
-          item="チェック柄スラくす"
+          item="スラックス"
           category="パンツ"
           want="キャップ"
         />
@@ -51,7 +51,7 @@ export const SuggestedItems: React.FC = () => {
           width="four"
           height="four"
           bland="NIKO AND"
-          item="チェック柄スラくす"
+          item="スラックス"
           category="パンツ"
           want="キャップ"
         />
@@ -59,7 +59,7 @@ export const SuggestedItems: React.FC = () => {
           width="four"
           height="four"
           bland="NIKO AND"
-          item="チェック柄スラくす"
+          item="スラックス"
           category="パンツ"
           want="キャップ"
         />
@@ -67,7 +67,7 @@ export const SuggestedItems: React.FC = () => {
           width="four"
           height="four"
           bland="NIKO AND"
-          item="チェック柄スラくす"
+          item="スラックス"
           category="パンツ"
           want="キャップ"
         />

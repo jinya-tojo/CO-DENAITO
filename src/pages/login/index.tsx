@@ -5,6 +5,7 @@ import { Button } from '../../components/Button/Index'
 import { TextInput } from '../../components/TextInput'
 import { useLogin } from 'src/hooks/useLogin'
 import { useSignUp } from 'src/hooks/useSignUp'
+import Image from 'next/image'
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -16,7 +17,7 @@ const Login: React.FC = () => {
     <>
       <div css={styles.container}>
         <div css={styles.icon}>
-          <img src="logo-codenaito.png" alt="ロゴ画像" />
+          <Image src="/logo-codenaito.png" alt="ロゴ画像" fill />
         </div>
         <TextInput
           tag="no"

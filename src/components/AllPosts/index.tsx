@@ -34,7 +34,7 @@ export const AllPosts: React.FC = () => {
             bland={post.bland}
             item={post.item}
             want={post.want}
-            category={post.bland}
+            category={post.category}
             key={index}
           />
         )

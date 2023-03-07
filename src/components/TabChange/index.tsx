@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { styles } from './styles'
 
@@ -8,16 +9,17 @@ export const TabChange: React.FC = () => {
     <div css={styles.container}>
       <div css={styles.iconWithTitle1}>
         <div css={styles.Icon}>
-          <img src="postsAll.png" alt="投稿アイテム" />
+          <Image src="/postsAll.png" alt="投稿アイテム" fill />
         </div>
         <p css={styles.title}>投稿したアイテム</p>
       </div>
       <div css={styles.iconWithTitle2}>
         <div css={styles.Icon}>
-          <img
+          <Image
             style={{ color: 'pink' }}
-            src="suggestPostsAll.png"
+            src="/suggestPostsAll.png"
             alt="おすすめしたアイテム"
+            fill
           />
         </div>
         <p css={styles.title}>おすすめしたアイテム</p>

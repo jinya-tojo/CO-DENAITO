@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { styles } from './styles'
 
@@ -15,7 +16,7 @@ export const SuggestTo: React.FC<SuggestToProps> = (props) => {
         <p css={styles.title}>おすすめ先のアイテム</p>
         <div css={styles.container}>
           <div css={styles.image}>
-            <img src="sampleClothe.jpeg" alt="投稿画像" />
+            <Image src="/sampleClothe.jpeg" alt="投稿画像" fill />
           </div>
           <div>
             <p css={styles.bland}>{bland}</p>

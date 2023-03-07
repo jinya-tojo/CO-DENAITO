@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { styles } from './styles'
+import Image from 'next/image'
 
 export const LoginHeader: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ export const LoginHeader: React.FC = () => {
       <header css={styles.header}>
         <div css={styles.logo}>
           <Link href="home">
-            <img src="logo-codenaito.png" alt="ロゴ画像" />
+            <Image src="/logo-codenaito.png" alt="ロゴ画像" fill />
           </Link>
         </div>
         <div css={styles.list}>
@@ -17,10 +18,11 @@ export const LoginHeader: React.FC = () => {
           </Link>
           <div css={styles.icon}>
             <Link href="/myPage">
-              <img
+              <Image
                 style={{ borderRadius: '50%' }}
-                src="icon_198x278.png"
+                src="/icon_198x278.png"
                 alt="プロフィール画像"
+                fill
               />
             </Link>
           </div>

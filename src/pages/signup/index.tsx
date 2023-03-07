@@ -8,6 +8,7 @@ import { doc, setDoc } from 'firebase/firestore'
 import { db } from 'src/firebase/firebase'
 import { userData } from 'src/libs/atom'
 import { useAtom } from 'jotai'
+import Image from 'next/image'
 
 const Signup: React.FC = () => {
   const router = useRouter()
@@ -46,7 +47,7 @@ const Signup: React.FC = () => {
   return (
     <div css={styles.container}>
       <div css={styles.icon}>
-        <img src="logo-codenaito.png" alt="ロゴ画像" />
+        <Image src="/logo-codenaito.png" alt="ロゴ画像" fill />
       </div>
       <div css={styles.image}>
         <PostImage shape="circle" tag="no" label="no" />

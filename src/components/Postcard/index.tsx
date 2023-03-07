@@ -1,6 +1,7 @@
 import React from 'react'
 import { getSizeStyle, getImageSizeStyle, styles } from './styles'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type PostcardProps = {
   width: string
@@ -16,17 +17,17 @@ export const Postcard: React.FC<PostcardProps> = (props) => {
 
   return (
     <>
-      <Link href="/postdetail">
+      <Link href="/postDetail">
         <div css={getSizeStyle(width)}>
           <div css={getImageSizeStyle(height)}>
-            <img src="sampleClothe.jpeg" alt="投稿画像" />
+            <Image src="/sampleClothe.jpeg" alt="投稿画像" fill />
           </div>
           <div>
             <p css={styles.bland}>{bland}</p>
             <p css={styles.item}>{item}</p>
             <div css={styles.iconWithWant}>
               <div css={styles.icon}>
-                <img src="addIcon3x.png" alt="addアイコン" />
+                <Image src="/addIcon3x.png" alt="addアイコン" fill />
               </div>
               <p css={styles.want}>{want}</p>
             </div>

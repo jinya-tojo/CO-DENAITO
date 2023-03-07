@@ -21,7 +21,5 @@
   "files.trimTrailingWhitespace": true,
   "npm.packageManager": "yarn",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": [
-    "signup"
-  ]
+  "cSpell.words": ["signup"]
 }

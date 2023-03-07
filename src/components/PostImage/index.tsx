@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { getLabelStyle, getShapeStyle, getTagStyle, styles } from './styles'
 
@@ -20,7 +21,7 @@ export const PostImage: React.FC<Props> = (props) => {
           <input type="file" css={styles.input} />
           <div css={styles.box}>
             <div css={styles.image}>
-              <img src="camera.png" alt="写真追加" />
+              <Image src="/camera.png" alt="写真追加" fill />
             </div>
             <p css={styles.text}>画像を選択する</p>
           </div>
