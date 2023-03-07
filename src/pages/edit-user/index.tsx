@@ -16,7 +16,7 @@ const EditUser: React.FC = () => {
   const router = useRouter()
 
   const onClickButton = () => {
-    router.push('/myPage')
+    router.push('/mypage')
   }
   return (
     <>

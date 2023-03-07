@@ -18,7 +18,7 @@ const Suggest: React.FC = () => {
   const router = useRouter()
 
   const onClickButton = () => {
-    router.push('/postDetail')
+    router.push('/postdetail')
   }
 
   return (

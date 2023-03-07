@@ -17,7 +17,7 @@ export const Postcard: React.FC<PostcardProps> = (props) => {
 
   return (
     <>
-      <Link href="/postDetail">
+      <Link href="/postdetail">
         <div css={getSizeStyle(width)}>
           <div css={getImageSizeStyle(height)}>
             <Image src="/sampleClothe.jpeg" alt="投稿画像" fill />

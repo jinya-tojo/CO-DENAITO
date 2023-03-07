@@ -17,7 +17,7 @@ export const LoginHeader: React.FC = () => {
             <button css={styles.button}>＋新規投稿</button>
           </Link>
           <div css={styles.icon}>
-            <Link href="/myPage">
+            <Link href="/mypage">
               <Image
                 style={{ borderRadius: '50%' }}
                 src="/icon_198x278.png"
