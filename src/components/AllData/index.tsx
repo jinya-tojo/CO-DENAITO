@@ -1,27 +1,29 @@
 import React from 'react'
+import { Post } from 'src/types'
 import { Postcard } from '../Postcard'
+import Link from 'next/link'
+import { useAtom } from 'jotai'
+import { postsData } from 'src/libs/atom'
 
 type Props = {
-  // post: Post
-  item: string
-  bland: string
-  detail: string
-  category: string
-  want: string
+  post: Post
 }
 
-export const AllData: React.FC<Props> = ({ item, bland, category, want }) => {
-  // const [user, setUser] = useAtom(userData)
+export const AllData: React.FC<Props> = ({ post }) => {
+  const [user, setUser] = useAtom(postsData)
+  const ClickCard = () => {
+    setUser(post)
+  }
   return (
-    <div>
+    <Link href="/postdetail" onClick={ClickCard}>
       <Postcard
         width="three"
         height="three"
-        bland={bland}
-        item={item}
-        want={want}
-        category={category}
+        bland={post.bland}
+        item={post.item}
+        want={post.want}
+        category={post.category}
       />
-    </div>
+    </Link>
   )
 }

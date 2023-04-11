@@ -10,7 +10,7 @@ import { PostImage } from 'src/components/PostImage'
 import { SelectCategory } from 'src/components/SelectCategory'
 import { TextInput } from 'src/components/TextInput'
 import { db } from 'src/firebase/firebase'
-import { userData } from 'src/libs/atom'
+import { postsData, userData } from 'src/libs/atom'
 import { styles } from '../../styles/postStyles'
 
 const Post: React.FC = () => {
@@ -20,6 +20,8 @@ const Post: React.FC = () => {
   const [category, setCategory] = useState('')
   const [want, setWant] = useState('')
   const [user, setUser] = useAtom(userData)
+  // ここから変更してみるよ
+  const [post, setPost] = useAtom(postsData)
   const router = useRouter()
   const id = useId()
 
@@ -47,6 +49,14 @@ const Post: React.FC = () => {
       ],
     })
     await setDoc(doc(db, 'posts', id), {
+      uid: user.uid,
+      item: item,
+      bland: bland,
+      detail: detail,
+      category: category,
+      want: want,
+    })
+    setPost({
       uid: user.uid,
       item: item,
       bland: bland,

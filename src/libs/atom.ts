@@ -18,3 +18,12 @@ export const userData = atom<User>({
     },
   ],
 })
+
+export const postsData = atom({
+  // uid: '',
+  item: '',
+  bland: '',
+  detail: '',
+  category: '',
+  want: '',
+})

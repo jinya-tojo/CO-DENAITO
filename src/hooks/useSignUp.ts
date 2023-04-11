@@ -20,7 +20,7 @@ export const useSignUp = () => {
           ...signupUser,
           uid: user.uid,
         })
-        router.push('/signup')
+        router.push('/user')
       })
       .catch((error) => {
         const errorCode = error.code
