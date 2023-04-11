@@ -17,7 +17,6 @@ export const Postcard: React.FC<PostcardProps> = (props) => {
 
   return (
     <>
-      {/* <Link href="/postdetail"> */}
       <div css={getSizeStyle(width)}>
         <div css={getImageSizeStyle(height)}>
           <Image src="/sampleClothe.jpeg" alt="投稿画像" fill />
@@ -35,7 +34,6 @@ export const Postcard: React.FC<PostcardProps> = (props) => {
           <p css={styles.category}>{category}</p>
         </div>
       </div>
-      {/* </Link> */}
     </>
   )
 }

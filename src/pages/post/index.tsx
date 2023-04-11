@@ -57,7 +57,6 @@ const Post: React.FC = () => {
       want: want,
     })
     setPost({
-      uid: user.uid,
       item: item,
       bland: bland,
       detail: detail,
