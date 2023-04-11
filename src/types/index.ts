@@ -9,7 +9,6 @@ export type User = {
 }
 
 export type Post = {
-  uid: string
   item: string
   bland: string
   detail: string
